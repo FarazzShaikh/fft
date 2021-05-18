@@ -1,8 +1,8 @@
 CC=gcc
 EXE=fft.out
-FLAGS=-O3
+FLAGS=-O3 -lm
 
 $(EXE): main.c fft.h
-	@echo "$(CC) $< -o $@"
-	@$(CC) $< -o $@
+	# @echo "$(CC) $< -o $@"
+	$(CC) $(FLAGS) $< -o $@
 
